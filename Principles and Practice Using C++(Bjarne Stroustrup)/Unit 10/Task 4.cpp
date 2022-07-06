@@ -79,7 +79,7 @@ double median(std::vector<Reading>& vec)
 
 int main()
 {
-	srand(time(0));
+	srand (time(0));
 	Reading r;
 	std::vector<Reading> vec;
 
