@@ -32,7 +32,6 @@ int main()
     std::ifstream is(file_name);
     check_open(is, file_name);
 
-    int i = 1;
     std::string buffer;
     std::istringstream ss;
     while (std::getline(is, buffer))
