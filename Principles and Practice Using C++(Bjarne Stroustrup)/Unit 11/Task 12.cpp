@@ -30,9 +30,7 @@ void revers_file_data(const std::string& fn )
     { std::cerr << "File not opened!" << std::endl; exit(-1);}
 
     for (int i = result.size() - 1; i >= 0; i--)
-    {
         ofs << result[i] << std::endl;
-    }
 }
 
 int main()
