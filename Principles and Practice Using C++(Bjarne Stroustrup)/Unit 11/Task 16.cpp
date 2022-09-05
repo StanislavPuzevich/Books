@@ -1,4 +1,4 @@
-﻿//16. Напишите программу, считывающую из файла числа, разделенные пробельными символами, 
+//16. Напишите программу, считывающую из файла числа, разделенные пробельными символами, 
 //и выводящую их в порядке возрастания по одному числу в строке. Каждое число должно быть записано только один раз, 
 //если обнаружится дубликат, то необходимо вывести количество таких дубликатов в строке.
 //Например, результат обработки ввода 7 5 5 7 3 11 7 5 должен иметь следующий вид:
@@ -13,13 +13,15 @@
 #include <string>
 #include <algorithm>
 
-void revers_words_in_line(std::string& fn )
+void counter_func(std::string& fn)
 {
     std::vector<int> vec;
 
     std::ifstream ifs(fn);
     if (!ifs.is_open())
-    { std::cerr << "File not opened!" << std::endl; exit(-1);}
+    {
+        std::cerr << "File not opened!" << std::endl; exit(-1);
+    }
 
     while (!ifs.eof())
     {
@@ -35,7 +37,9 @@ void revers_words_in_line(std::string& fn )
     std::getline(std::cin, fn);
     std::ofstream ofs(fn);
     if (!ofs.is_open())
-    { std::cerr << "File not opened!" << std::endl; exit(-1);}
+    {
+        std::cerr << "File not opened!" << std::endl; exit(-1);
+    }
 
     std::unordered_map<int, int> mp;
     for (auto i : vec)
@@ -50,7 +54,7 @@ int main()
     std::cout << "Enter the file name for input: ";
     std::getline(std::cin, file_name);
 
-    revers_words_in_line(file_name);
+    counter_func(file_name);
 
     std::cout << "The program has been successfully completed!" << std::endl;
 
