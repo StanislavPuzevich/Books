@@ -19,9 +19,7 @@ void counter_func(std::string& fn)
 
     std::ifstream ifs(fn);
     if (!ifs.is_open())
-    {
-        std::cerr << "File not opened!" << std::endl; exit(-1);
-    }
+    { std::cerr << "File not opened!" << std::endl; exit(-1); }
 
     while (!ifs.eof())
     {
@@ -37,9 +35,7 @@ void counter_func(std::string& fn)
     std::getline(std::cin, fn);
     std::ofstream ofs(fn);
     if (!ofs.is_open())
-    {
-        std::cerr << "File not opened!" << std::endl; exit(-1);
-    }
+    { std::cerr << "File not opened!" << std::endl; exit(-1); }
 
     std::unordered_map<int, int> mp;
     for (auto i : vec)
